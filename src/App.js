@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Profile from "./Profile/Profile.js"
 
 function App() {
+  const handleName=(fullName)=>alert(fullName)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Profile 
+     fullName="Landon Neil"
+     profession="student"
+     bio="good mythical morning participant"
+     handleName={handleName}>
+       <img src='https://cdn.pixabay.com/photo/2017/06/13/12/53/profile-2398782_1280.png' alt="profile" style={{height:'200px'}}></img>
+     </Profile>
     </div>
   );
 }
